@@ -14,7 +14,7 @@ else {
 }
 
 // Part 2: Even / Odd
-const number = 6;
+const number = 10;
 
 const newNumer = number % 2 === 0;
 
@@ -27,7 +27,7 @@ else {
 
 
 // Part 3: Hotdogs
-const numberOfHotdogs = 99;
+const numberOfHotdogs = 8;
 
 if (numberOfHotdogs > 0 && numberOfHotdogs < 5) {
     console.log(numberOfHotdogs * 2 + "€");
