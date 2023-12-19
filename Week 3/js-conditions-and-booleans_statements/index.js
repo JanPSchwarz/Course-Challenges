@@ -27,19 +27,19 @@ else {
 
 
 // Part 3: Hotdogs
-const numberOfHotdogs = 1;
+const numberOfHotdogs = 99;
 
-if (numberOfHotdogs < 5) {
+if (numberOfHotdogs > 0 && numberOfHotdogs < 5) {
     console.log(numberOfHotdogs * 2 + "€");
 }
 else if (numberOfHotdogs >= 5 && numberOfHotdogs < 100) {
-    console.log("Preis für die Hotdogs:" + (numberOfHotdogs * 1.5) + "€");
+    console.log("Preis für " + numberOfHotdogs + " Hotdogs: " + (numberOfHotdogs * 1.5) + "€");
 }
-else if (numberOfHotdogs >= 100 || numberOfHotdogs === 1000000) {
-    console.log(numberOfHotdogs * 1 + "€");
+else if (numberOfHotdogs >= 100 && numberOfHotdogs <= 1000000) {
+    console.log("Preis für " + numberOfHotdogs + " Hotdogs: " + (numberOfHotdogs * 1) + "€");
 }
 else if (numberOfHotdogs > 1000000) {
-    console.log(numberOfHotdogs * 0.1 + "€");
+    console.log("Preis für " + numberOfHotdogs + " Hotdogs: " + (numberOfHotdogs * 0.1) + "€");
 }
 else {
     console.log("Error");
