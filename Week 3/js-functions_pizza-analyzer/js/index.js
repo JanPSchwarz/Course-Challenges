@@ -5,6 +5,7 @@ const pizza1 = document.querySelector('[data-js="pizza-1"]');
 const pizzaInput2 = document.querySelector('[data-js="pizza-input-2"]');
 const pizza2 = document.querySelector('[data-js="pizza-2"]');
 const outputSection = document.querySelector('[data-js="output-section"]');
+const outputText = document.querySelector('[data-js="output-section-text"]')
 
 const output = document.querySelector('[data-js="output"]');
 
@@ -12,11 +13,13 @@ pizzaInput1.addEventListener("input", () => {
   let pizzaSize1 = pizzaInput1.value;
   let pizzaSize2 = pizzaInput2.value;
 
-  calculatePizzaGain(pizzaSize1, pizzaSize2);
+  calculatePizzaGain(pizzaSize2, pizzaSize1);
 
   updatePizzaDisplay(pizza1, pizzaSize1);
 
   updateOutputColor(pizzaSize1, pizzaSize2);
+
+  outputText.innerHTML = "1";
 });
 
 pizzaInput2.addEventListener("input", () => {
@@ -28,6 +31,8 @@ pizzaInput2.addEventListener("input", () => {
   updatePizzaDisplay(pizza2, pizzaSize2);
 
   updateOutputColor(pizzaSize2, pizzaSize1);
+
+  outputText.innerHTML = "2";
 });
 
 // Task 1
