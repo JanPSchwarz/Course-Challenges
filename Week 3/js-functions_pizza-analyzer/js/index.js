@@ -13,6 +13,10 @@ pizzaInput1.addEventListener("input", () => {
   let pizzaSize2 = pizzaInput2.value;
 
   calculatePizzaGain(pizzaSize1, pizzaSize2);
+
+  updatePizzaDisplay(pizza1, pizzaSize1);
+
+  updateOutputColor(pizzaSize1, pizzaSize2);
 });
 
 pizzaInput2.addEventListener("input", () => {
@@ -20,6 +24,10 @@ pizzaInput2.addEventListener("input", () => {
   let pizzaSize2 = pizzaInput2.value;
 
   calculatePizzaGain(pizzaSize1, pizzaSize2);
+
+  updatePizzaDisplay(pizza2, pizzaSize2);
+
+  updateOutputColor(pizzaSize2, pizzaSize1);
 });
 
 // Task 1
@@ -37,5 +45,22 @@ function calculatePizzaGain(diameter1, diameter2) {
 // Task 2
 // define the function updatePizzaDisplay here
 
+function updatePizzaDisplay(pizzaElement, newSize) {
+  pizzaSize = (newSize / 24) * 100;
+
+  pizzaElement.style.width = pizzaSize + "px";
+}
+
 // Task 3
 // define the function updateOutputColor here
+
+function updateOutputColor(size1, size2) {
+  if (size1 >= size2) {
+    outputSection.style.backgroundColor = "var(--green)";
+  } else {
+    outputSection.style.backgroundColor = "var(--red)";
+  }
+  // else {
+  //   outputSection.style.backgroundColor = "";
+  // }
+}
