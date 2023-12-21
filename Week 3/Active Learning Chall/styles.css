@@ -180,4 +180,5 @@
 .footer {
   background-color: #380099;
   color: var(--white);
+  font-size: 0.8rem;
 }
