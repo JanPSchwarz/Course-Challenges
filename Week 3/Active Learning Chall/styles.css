@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: cornsilk;
+}
+
+/* Allgemeine Rule-Sets */
+
+.box-1 {
+  background-color: #ffd166;
+  border-radius: 5px;
+  margin: 20px 20px 100px 20px;
+  padding: 10px;
+}
+
+.container {
+  background-color: #54a630;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.container > p {
+  color: cornsilk;
+  background-color: #4261ee;
+  border-radius: 5px;
+  margin: 8px;
+  height: 40px;
+}
+
+.Überschrift {
+  margin: 10px 10px 5px 0;
+}
+
+/* No-Flex */
+
+.div-no-flex {
+  position: relative;
+}
+
+.div-no-flex > p {
+  display: inline-block;
+  padding: 10px;
+}
+
+.div-no-flex :nth-child(1) {
+  position: relative;
+  left: 2%;
+}
+
+.div-no-flex :nth-child(2) {
+  position: absolute;
+  left: 50%;
+}
+
+.div-no-flex :nth-child(3) {
+  position: absolute;
+  right: 2%;
+  margin-right: 20px;
+}
+
+/* Equally Spaced */
+
+.div-equal {
+  display: flex;
+}
+
+.div-equal > p {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* One Element Bigger */
+
+.div-one-bigger {
+  display: flex;
+}
+
+.div-one-bigger > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.div-one-bigger :nth-child(1) {
+  flex: 2;
+}
+
+/* One Element even bigger */
+
+.div-two-bigger {
+  display: flex;
+  flex: 1;
+}
+
+.div-two-bigger > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1; */
+}
+
+.div-two-bigger :nth-child(1) {
+  flex: 3;
+}
+
+.div-two-bigger :nth-child(2) {
+  flex: 4;
+}
+
+.div-two-bigger :nth-child(3) {
+  flex: 2;
+}
+
+/* ------> Nächste Aufgabe */
+
+.box-2 * {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.box-2 {
+  margin: 20px;
+}
+
+.header {
+  color: var(--white);
+  background-color: #ef466f;
+}
+
+.main-container {
+  display: flex;
+  background-color: #ffd166;
+}
+
+.main-sections {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.aside {
+  flex: 3;
+  background-color: #4bc8f0;
+}
+
+.section-one {
+  flex: 2;
+  background-color: #00509d;
+  color: var(--white);
+}
+
+.section-two {
+  flex: 1;
+  background-color: #08d6a0;
+}
+
+.section-three {
+  flex: 1;
+  background-color: #08d6a0;
+}
+
+.footer {
+  background-color: #380099;
+  color: var(--white);
+}
