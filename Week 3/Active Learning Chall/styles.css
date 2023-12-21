@@ -53,7 +53,7 @@
 
 .div-no-flex :nth-child(2) {
   position: absolute;
-  left: 50%;
+  right: 50%;
 }
 
 .div-no-flex :nth-child(3) {
@@ -120,6 +120,8 @@
 
 /* ------> Nächste Aufgabe */
 
+/* allgemeine rule-sets */
+
 .box-2 * {
   border-radius: 10px;
   padding: 10px;
@@ -130,10 +132,14 @@
   margin: 20px;
 }
 
+/* header */
+
 .header {
   color: var(--white);
   background-color: #ef466f;
 }
+
+/* main */
 
 .main-container {
   display: flex;
@@ -168,6 +174,8 @@
   flex: 1;
   background-color: #08d6a0;
 }
+
+/* footer */
 
 .footer {
   background-color: #380099;
