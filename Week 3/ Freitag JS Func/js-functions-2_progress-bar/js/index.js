@@ -1,4 +1,5 @@
-console.clear();
+// console.clear();
+
 /*
 Progress Bar
 
@@ -21,4 +22,47 @@ For that:
 
 const progressBar = document.querySelector('[data-js="progress-bar"]');
 
-function calculateScrollPercentage() {}
+// Mit Schreibweise Funktion:
+
+// function calculateScrollPercentage(positionY, dokumentLänge, windowGröße) {
+//   let position = (positionY / (dokumentLänge - windowGröße)) * 100;
+//   return position;
+// }
+
+// document.addEventListener("scroll", () => {
+//   progressBar.style.width =
+//     calculateScrollPercentage(
+//       window.scrollY,
+//       document.body.clientHeight,
+//       window.innerHeight
+//     ) + "%";
+//     })
+
+// Mit Schreibweise Arrow-Function:
+
+const calculateScrollBar = (positionY, dokumentLänge, windowGröße) => (positionY / (dokumentLänge - windowGröße)) * 100;
+
+document.addEventListener("scroll", () => {
+  progressBar.style.width =
+    calculateScrollBar(
+      window.scrollY,
+      document.body.clientHeight,
+      window.innerHeight
+    ) + "%";
+})
+
+// console.log(
+//   calculateScrollPercentage(window.scrollY, document.body.clientHeight)
+// );
+
+
+//   console.log(calculateScrollPercentage(window.scrollY, document.body.clientHeight, window.innerHeight))
+// });
+
+// const position = window.scrollY;
+// const windowHeight = window.innerHeight;
+// const documentHeight = document.body.clientHeight;
+
+// console.log("PoisitonY: " + position);
+// console.log("window height: " + windowHeight);
+// console.log("document height:" + documentHeight);
