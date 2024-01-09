@@ -9,7 +9,7 @@ Switch the input values of the two input fields when clicking the button
 - [ ] Make sure that when the switch button is clicked, the values of the two input fields are being switched
 - [ ] Make sure that all three buttons work on both input fields
 
-Hint: the HTML entity for the switch button is: &updownarrow
+Hint: the HTML entity for the switch button is: &updownarrow;
 
 */
 
@@ -19,8 +19,20 @@ const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
 
 uppercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toUpperCase();
+  secondInput.value = secondInput.value.toUpperCase();
 });
 
 lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
+  secondInput.value = secondInput.value.toLowerCase();
+});
+
+const secondInput = document.querySelector('[data-js="second-input"]');
+const switchButton = document.querySelector('[data-js="button-switch"]');
+
+switchButton.addEventListener("click", () => {
+  const a = firstInput.value;
+  const b = secondInput.value;
+  firstInput.value = firstInput.value.replace(a, b);
+  secondInput.value = secondInput.value.replace(b, a);
 });
