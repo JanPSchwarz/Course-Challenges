@@ -23,7 +23,7 @@ footer.classList.add("post__footer");
 span.classList.add("post__username");
 button.classList.add("post__button");
 
-// button.setAttribute("datja-js", "like__buttonTwo");
+// button.setAttribute("data-js", "like__buttonTwo");
 
 paragraph.textContent =
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
