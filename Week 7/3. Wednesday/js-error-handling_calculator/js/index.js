@@ -22,4 +22,3 @@ form.addEventListener("submit", (event) => {
   const operation = event.target.operation.value;
   output.innerText = operations[operation](firstNumber, secondNumber);
 });
-addEventListener
