@@ -20,5 +20,12 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number(event.target.firstNumber.value);
   const secondNumber = Number(event.target.secondNumber.value);
   const operation = event.target.operation.value;
-  output.innerText = operations[operation](firstNumber, secondNumber);
+
+  const errorText = document.querySelector(".error");
+  try {
+    output.innerText = operations[operation](firstNumber, secondNumber);
+    errorText.textContent = "";
+  } catch (error) {
+    errorText.textContent = "Teile durch eine andere Zahl als 0!";
+  }
 });
