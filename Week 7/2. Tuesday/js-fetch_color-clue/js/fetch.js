@@ -6,6 +6,7 @@ export async function fetchNewColor() {
     `https://www.thecolorapi.com/id?hex=${hexCode}`
   );
 
+  console.log(colorApiUrl);
   const data = await colorApiUrl.json();
 
   console.log(hexCode);

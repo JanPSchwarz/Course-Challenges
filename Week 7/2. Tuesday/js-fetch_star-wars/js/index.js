@@ -51,4 +51,6 @@ async function fetchDataAndRender() {
     const card = Card(data);
     renderElement(card);
   });
+
+  console.table(datas.results);
 }
