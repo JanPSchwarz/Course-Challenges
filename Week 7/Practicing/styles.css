@@ -2,6 +2,36 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(Cat82_generated.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .start-box {
   display: flex;
   flex-direction: column;
@@ -9,31 +39,36 @@
   align-items: center;
 }
 
-.header {
+.heading {
   text-decoration: underline;
   font-size: 2.5rem;
   color: red;
   margin: 30px;
   text-shadow: 0 0 5px orange;
   text-align: center;
+  background-color: ;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .button {
   width: 30vw;
   min-width: 100px;
+  max-width: 300px;
   color: blue;
   background-color: lightblue;
   border: 3px black dashed;
   font-size: 2rem;
   cursor: pointer;
   border-radius: 5px;
+  margin-bottom: 100px;
 }
 
-.teaser {
+/* .teaser {
   margin-bottom: 50px;
   font-size: 0.6rem;
   margin-top: 0;
-}
+} */
 
 .card {
   display: flex;
@@ -53,6 +88,7 @@
   box-shadow: 0 0 10px 4px orange;
   border: 2px solid black;
   line-height: 1.5;
+  margin: 30px auto 50px;
 }
 
 .cat-description > li {
@@ -70,8 +106,22 @@
 }
 
 .card > img {
-  max-width: 60vw;
+  max-width: 40vw;
+  min-width: 200px;
   object-fit: contain;
   border: 2px solid black;
   box-shadow: 0 0 10px 4px orange;
+}
+
+.divider {
+  height: 2px;
+  width: 80vw;
+  background-color: black;
+  margin-bottom: 70px;
+}
+
+.note {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
