@@ -4,6 +4,9 @@ const userElement = document.querySelector(".user");
 
 async function getUser(url) {
   const response = await fetch(url);
+
+  // Error-Handling when user not existing
+
   if (!response.ok) {
     errorText.textContent =
       "Error: User doesn't exist! Please select another User.";
@@ -11,11 +14,13 @@ async function getUser(url) {
   } else {
     errorText.textContent = "";
   }
+
+  // Error-Handling when Link not vali
   try {
     const json = await response.json();
     return json.data;
   } catch (error) {
-    errorText.textContent = "Network-Error: Parsing JSON-Data not possible.";
+    errorText.textContent = "Network-Error: Unvalid Homepage-link";
     userElement.textContent = "Here should be a Homepage.";
   }
 }
