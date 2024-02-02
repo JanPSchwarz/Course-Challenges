@@ -10,7 +10,7 @@ export default function App() {
 }
 
 function Smiley({ isHappy, happy, sad }) {
-  return <h1>{isHappy ? `${happy}` : `${sad}`}</h1>;
+  return <h1>{isHappy ? happy : sad}</h1>;
 }
 
 /* //return isHappy ? <h1>😏</h1> : <h1>😭</h1>; */
