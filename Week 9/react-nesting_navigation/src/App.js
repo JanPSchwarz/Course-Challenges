@@ -1,7 +1,5 @@
 import "./styles.css";
 
-import avatar from "./img/avatar.jpg";
-
 import Header from "./Components/Header";
 import Navigation from "./Components/Nav";
 import Link from "./Components/Link";
@@ -14,15 +12,9 @@ export default function App() {
       <Header>
         <Logo />
         <Navigation>
-          <Link className="navigation__link" href="#home">
-            Home
-          </Link>
-          <Link className="navigation__link" href="#about">
-            About
-          </Link>
-          <Link className="navigation__link" href="#impressum">
-            Impressum
-          </Link>
+          <Link href="#home">Home</Link>
+          <Link href="#about">About</Link>
+          <Link href="#impressum">Impressum</Link>
         </Navigation>
         <Avatar />
       </Header>
