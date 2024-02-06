@@ -1,40 +1,32 @@
 import React from "react";
 import "./styles.css";
+import { useState } from "react";
 
 export default function App() {
-  let code = "?";
+  const [code, setCode] = useState("?");
 
-  const validCode = "🐡🐠🐋";
+  const [validCode, setValidCode] = useState("");
+
+  function handleClick(event) {
+    setCode(event.target.textContent);
+    setValidCode(event.target.textContent);
+    console.log(event.target.textContent);
+  }
 
   return (
     <div className="container">
       <div className="button-container">
-        <button
-          type="button"
-          onClick={() => {
-            console.log("Update Code!");
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Pufferfish">
             🐡
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            console.log("Update Code!");
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Whale">
             🐋
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            console.log("Update Code!");
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Clownfish">
             🐠
           </span>
@@ -44,9 +36,9 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
-          console.log("Reset Code!");
-        }}
-      >
+          setCode("?");
+          console.log("Wähle einen Fisch");
+        }}>
         Reset
       </button>
 
