@@ -17,7 +17,7 @@ export default function App() {
           -
         </button>
         <button
-          type="button"
+          type="button"k
           onClick={() => {
             setcount(count + 1);
           }}>
