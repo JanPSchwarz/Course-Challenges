@@ -55,7 +55,9 @@ export default function EntriesSection() {
               motto={entrie.motto}
               notes={entrie.notes}
             />
-            <Divider />
+            {entrie === entries[entries.length - 1] ? "" : <Divider />}
+            {/* {console.log(entries[entries.length - 1])} */}
+            {console.log(entries)}
           </>
         ))}
       </div>

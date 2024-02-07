@@ -2,7 +2,8 @@ import "./Card.css";
 import Tag from "./Tag";
 import Button from "./Button";
 
-function Card({ user }) {
+function Card({ user, key }) {
+  console.log(key);
   return (
     <article className="card">
       <h2>{user.name}</h2>

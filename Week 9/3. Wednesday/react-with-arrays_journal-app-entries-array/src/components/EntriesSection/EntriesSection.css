@@ -10,6 +10,6 @@
   gap: 32px;
 }
 
-.entries-section__entries > .divider:last-child {
+/* .entries-section__entries > .divider:last-child {
   display: none;
-}
+} */
