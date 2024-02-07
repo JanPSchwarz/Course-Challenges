@@ -3,14 +3,11 @@ import "./styles.css";
 import { useState } from "react";
 
 export default function App() {
-  const [code, setCode] = useState("?");
-
-  const [validCode, setValidCode] = useState("");
+  const [code, setCode] = useState("");
+  const validCode = "🐡🐠🐋";
 
   function handleClick(event) {
-    setCode(event.target.textContent);
-    setValidCode(event.target.textContent);
-    console.log(event.target.textContent);
+    setCode(code + event.target.textContent);
   }
 
   return (
@@ -30,7 +27,7 @@ export default function App() {
           <span role="img" aria-label="Clownfish">
             🐠
           </span>
-        </button>{" "}
+        </button>
       </div>
 
       <button
@@ -41,7 +38,6 @@ export default function App() {
         }}>
         Reset
       </button>
-
       {code === validCode && <p>Valid code!</p>}
     </div>
   );
