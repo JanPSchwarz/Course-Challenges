@@ -9,3 +9,7 @@
   flex-direction: column;
   gap: 32px;
 }
+
+.entries-section__entries > .divider:last-child {
+  display: none;
+}
