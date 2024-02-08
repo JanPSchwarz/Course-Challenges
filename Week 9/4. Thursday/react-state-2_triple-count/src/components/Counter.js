@@ -5,8 +5,13 @@ export default function Counter() {
 
   function handleIncrement() {
     setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
+
+    // setCount((prevCount) => prevCount + 1);
+
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
+
+    // console.log(count);
   }
 
   return (
@@ -15,8 +20,7 @@ export default function Counter() {
       <button
         type="button"
         className="counter__button"
-        onClick={handleIncrement}
-      >
+        onClick={handleIncrement}>
         Increment count by 3
       </button>
     </div>

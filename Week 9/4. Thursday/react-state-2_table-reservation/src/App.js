@@ -3,7 +3,7 @@ import Counter from "./components/Counter";
 import "./styles.css";
 
 export default function App() {
-  const [people, setPeople] = useState(0);
+  const [people, setPeople] = useState(1);
 
   function addPeople() {
     setPeople(people + 1);
