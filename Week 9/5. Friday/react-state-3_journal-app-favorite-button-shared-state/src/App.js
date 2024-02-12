@@ -54,11 +54,19 @@ function App() {
   }
 
   function handleToggleFavorite(id) {
-    const entriesAfterTogglingLike = entries.map((entrie) =>
-      entrie.id === id ? { ...entries, isFavorite: !entrie.isFavorite } : entrie
+    const arrayAfterTogglingFav = entries.map((entry) =>
+      entry.id === id ? { ...entry, isFavorite: !entry.isFavorite } : entry
     );
 
-    setEntries(entriesAfterTogglingLike);
+    setEntries(arrayAfterTogglingFav);
+
+    // const arrayAfterTogglingFav = entries.map((entry) => {
+    //   if (entry.id === id) {
+    //     entry.isFavorite = !entry.isFavorite;
+    //   }
+    //   return entry;
+    // });
+    // setEntries(arrayAfterTogglingFav);
   }
 
   console.log(entries);
