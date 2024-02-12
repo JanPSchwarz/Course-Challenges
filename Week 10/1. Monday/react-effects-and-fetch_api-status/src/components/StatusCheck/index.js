@@ -28,6 +28,8 @@ export default function StatusCheck() {
     if (response.ok) {
       console.log("Fetch erfolgreich");
       return setStatusIcon(true);
+    } else {
+      console.log("Fetch nicht erfolgreich");
     }
     // --^-- write your code here --^--
   }
