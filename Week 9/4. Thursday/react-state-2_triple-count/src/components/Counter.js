@@ -15,7 +15,7 @@ export default function Counter() {
   }
 
   return (
-    <div className="counter">
+    <div className="counter">k
       <h1>Count: {count}</h1>
       <button
         type="button"
