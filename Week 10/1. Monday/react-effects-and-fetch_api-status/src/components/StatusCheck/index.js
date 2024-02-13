@@ -29,7 +29,7 @@ export default function StatusCheck() {
       console.log("Fetch erfolgreich");
       return setStatusIcon(true);
     } else {
-      console.log("Fetch nicht erfolgreich");
+      console.log("Fetch nicht erfolgreich");k
     }
     // --^-- write your code here --^--
   }

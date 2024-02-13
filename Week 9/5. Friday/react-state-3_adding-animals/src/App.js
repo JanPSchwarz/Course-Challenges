@@ -11,7 +11,7 @@ const initialAnimals = [
     emoji: "🐙",
   },
   {
-    id: "iMsbXQ1",
+    id: "iMsbXQ1",k
     name: "Crocodile",
     emoji: "🐊",
   },
