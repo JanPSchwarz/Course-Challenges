@@ -10,7 +10,14 @@ export default function Volumes() {
       <p>{introduction}</p>
       <h2>All Volumes:</h2>
       <ul>
-        <li>
+        {volumes.map((volume) => (
+          <li>
+            <Link href="/volumes/the-fellowship-of-the-ring">
+              {volume.title}
+            </Link>
+          </li>
+        ))}
+        {/* <li>
           <Link href="/volumes/the-fellowship-of-the-ring">
             {volumes[0].title}
           </Link>
@@ -20,7 +27,7 @@ export default function Volumes() {
         </li>
         <li>
           <Link href="/volumes/the-return-of-the-king">{volumes[2].title}</Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

@@ -14,7 +14,7 @@ export default function theReturnOfTheKing() {
       <h1>{book.title}</h1>
       <Image
         src={book.cover}
-        alt="book one cover"
+        alt="book three cover"
         width={400}
         height={600}
       ></Image>
