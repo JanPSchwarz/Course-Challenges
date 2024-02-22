@@ -12,9 +12,7 @@ export default function Volumes() {
       <ul>
         {volumes.map((volume) => (
           <li key={volume.name}>
-            <Link href="/volumes/the-fellowship-of-the-ring">
-              {volume.title}
-            </Link>
+            <Link href={`volumes/${volume.slug}`}>{volume.title}</Link>
           </li>
         ))}
       </ul>
