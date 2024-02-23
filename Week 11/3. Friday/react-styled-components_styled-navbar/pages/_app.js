@@ -1,6 +1,23 @@
 import Link from "next/link";
 import GlobalStyle from "../styles";
 import styled from "styled-components";
+import { Roboto, IBM_Plex_Mono } from "@next/font/google";
+import { Roboto_Mono } from "@next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const ibm_Plex_Mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const StyledNav = styled.nav`
   border-bottom: solid 2px grey;
@@ -15,7 +32,6 @@ const StyledList = styled.ul`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-
   &:hover {
     text-decoration: underline;
   }
@@ -23,9 +39,9 @@ const StyledLink = styled(Link)`
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <main className={roboto}>
       <GlobalStyle />
-      <StyledNav>
+      <StyledNav className={ibm_Plex_Mono.className}>
         <StyledList>
           <li>
             <StyledLink href="/">Home</StyledLink>
@@ -37,8 +53,9 @@ export default function App({ Component, pageProps }) {
             <StyledLink href="/contact">Contact</StyledLink>
           </li>
         </StyledList>
+        <p className={roboto_mono}>Wie sieht diese Schrift aus?</p>
       </StyledNav>
       <Component {...pageProps} />
-    </>
+    </main>
   );
 }
