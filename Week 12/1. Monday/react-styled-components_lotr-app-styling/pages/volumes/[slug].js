@@ -3,7 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { volumes } from "../../lib/data";
 import styled from "styled-components";
-// import LeftArrow from "../../icons/left-arrow.svg";
+import LeftArrow from "../../icons/arrow-left.svg";
+import RightArrow from "../../icons/arrow-right.svg";
+import Chevron from "../../icons/chevron-left.svg";
 
 const StyledBookSection = styled.section`
   background: ${({ $color }) => $color};
@@ -41,6 +43,14 @@ const StyledStrong = styled.strong`
   font-size: 1.2rem;
 `;
 
+const StyledChevron = styled(Chevron)``;
+
+const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+`;
+
 export default function VolumeDetail() {
   const router = useRouter();
   const { slug } = router.query;
@@ -59,7 +69,9 @@ export default function VolumeDetail() {
 
   return (
     <>
-      <Link href="/volumes">← All Volumes</Link>
+      <StyledLink href="/volumes">
+        <StyledChevron /> All Volumes
+      </StyledLink>
       <h1>{title}</h1>
       <p>{description}</p>
       <StyledBookSection $color={volume.color}>
