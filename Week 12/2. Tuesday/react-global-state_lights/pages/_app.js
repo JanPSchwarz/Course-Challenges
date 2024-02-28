@@ -44,6 +44,8 @@ export default function App({ Component, pageProps }) {
 
   const isDimmed = numberOfLightsOn === 0 ? true : false;
 
+  console.log(isDimmed);
+
   return (
     <Layout isDimmed={isDimmed}>
       <GlobalStyle />

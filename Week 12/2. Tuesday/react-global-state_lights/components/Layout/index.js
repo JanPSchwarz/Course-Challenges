@@ -16,7 +16,7 @@ const Background = styled.div`
 
 const StyledImage = styled(Image)`
   object-fit: cover;
-  opacity: 1;
+  opacity: 0.8;
   user-select: none;
 `;
 
