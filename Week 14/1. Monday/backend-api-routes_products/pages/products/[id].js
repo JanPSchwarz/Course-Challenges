@@ -7,11 +7,15 @@ export default function DetailedProducts() {
 
     if (!response) {
       const error = new Error(`An error occured...`);
-      error.info = await res.json();
-      error.status = res.status;
+      error.info = await response.json();
+      error.status = response.status;
       throw error;
     }
-
+    if (response.ok) {
+      return response.json();
+    } else {
+      return;
+    }
     return response.json();
   }
   const router = useRouter();
@@ -24,7 +28,7 @@ export default function DetailedProducts() {
   }
 
   if (!data) {
-    return <h1>Fail</h1>;
+    return <h1>Fail 2</h1>;
   }
 
   console.log(data);

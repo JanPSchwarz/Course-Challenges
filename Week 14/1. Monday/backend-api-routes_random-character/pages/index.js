@@ -6,8 +6,8 @@ export default function HomePage() {
 
     if (!response) {
       const error = new Error(`An error occured...`);
-      error.info = await res.json();
-      error.status = res.status;
+      error.info = await response.json();
+      error.status = response.status;
       throw error;
     }
 

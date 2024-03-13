@@ -5,7 +5,7 @@ export default function handler(request, response) {
   const product = getProductById(id);
 
   if (!product) {
-    return response.status(404).json();
+    return response.status(404).json({message: "test"});
   }
 
   response.status(200).json(product);

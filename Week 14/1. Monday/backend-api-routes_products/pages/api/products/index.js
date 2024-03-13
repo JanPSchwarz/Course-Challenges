@@ -6,5 +6,5 @@ export default function handler(request, response) {
   if (!products) {
     return response.status(404).json({ message: "Page not found" });
   }
-  response.status(200).json(products);
+  response.status(200).json(products);      
 }

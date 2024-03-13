@@ -9,5 +9,6 @@ export default function handler(request, response) {
     age: chance.age(),
     profession: chance.profession(),
   };
+  
   response.status(200).json(character);
 }
